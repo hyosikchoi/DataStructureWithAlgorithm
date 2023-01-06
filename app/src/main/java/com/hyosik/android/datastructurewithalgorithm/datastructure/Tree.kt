@@ -40,12 +40,12 @@ data class BinaryTree(
     }
 
     @JvmName("setLeftSubTree1")
-    fun setLeftSubTree(tree : BinaryTree) {
+    fun setLeftSubTree(tree : BinaryTree?) {
         this.leftSubTree = tree
     }
 
     @JvmName("setRightSubTree1")
-    fun setRightSubTree(tree : BinaryTree) {
+    fun setRightSubTree(tree : BinaryTree?) {
         this.rightSubTree = tree
     }
     /** 전위순회 : 루트노드를 먼저 출력하고 왼쪽 , 오른쪽을 재귀로 접근 */
@@ -73,6 +73,24 @@ data class BinaryTree(
         this.postOrderTraversal(tree.getRightSubTree())
         println(tree.data)
 
+    }
+
+    fun removeLeftSubTree() : BinaryTree? {
+        // 제거할 노드는 반환해야 하므로 지역변수에 저장
+        val deletingNode = this.getLeftSubTree()
+        // 그리고 자식변수는 제거할 것이므로 null 지정
+        this.setLeftSubTree(null)
+
+        return deletingNode
+    }
+
+    fun removeRightSubTree() : BinaryTree? {
+        // 제거할 노드는 반환해야 하므로 지역변수에 저장
+        val deletingNode = this.getRightSubTree()
+        // 그리고 자식변수는 제거할 것이므로 null 지정
+        this.setRightSubTree(null)
+
+        return deletingNode
     }
 
 }
