@@ -12,7 +12,11 @@ package com.hyosik.android.datastructurewithalgorithm.datastructure
  * 포화 이진 트리 (트리의 최대 레벨에 있는 모든 터미널 노드가 꽉 찬 트리)
  * 완전 이진 트리 (최대 레벨을 제외한 나머지 레벨에는 모두 채워져 있고, 최대 레벨의 노드들은 왼쪽부터 채워진 트리)
  */
-
+/**
+ * 이진 트리 사용처
+ * 이진 트리는 컴파일러가 사용하는 구문 트리를 만들거나 JPEG , MPEG 파일을 만드는 압축 알고리즘인
+ * 허프만 트리를 만들 때 유용하게 쓰입니다.
+ */
 data class BinaryTree(
     var data : Int,
     var leftSubTree : BinaryTree ?= null,
