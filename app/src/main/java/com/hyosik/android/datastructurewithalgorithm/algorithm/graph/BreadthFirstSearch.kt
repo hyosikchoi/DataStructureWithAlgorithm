@@ -58,7 +58,7 @@ fun main() {
  * 3. Dequeue한 정점의 인접 정점을 순회.(만약 인접 정점이 이미 방문한 정점이라면 건너뛰고 방문하지 않은 정점이라면
  * 첫 번째 경우 반복)
  */
-private fun BFS(vertex: Vertex , visited_vertices : Hashtable<String,Boolean>) {
+private fun BFS(vertex: Vertex , visited_vertices: Hashtable<String,Boolean>) {
     val queue : Queue<Vertex> = LinkedList()
     /** 1번 */
     visited_vertices[vertex.value] = true
